@@ -64,7 +64,7 @@ jobs:
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #        run: mvn -f /home/runner/work/swkom/swkom/springboot/ -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=pjt985_swkom
 
-build:
+  build:
     #Depends on sonar's job
     needs: tests
     name: Build
