@@ -12,6 +12,8 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <springdoc.version>1.6.8</springdoc.version>
         <swagger-ui.version>4.10.3</swagger-ui.version>
+	<sonar.organization>pjt985</sonar.organization>
+	<sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -26,6 +28,26 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+	    <plugin>
+	      <groupId>org.jacoco</groupId>
+	      <artifactId>jacoco-maven-plugin</artifactId>
+	      <version>0.8.7</version>
+	      <executions>
+		<execution>
+			<goals>
+				<goal>prepare-agent</goal>
+			</goals>
+		</execution>
+		<!-- attached to Maven test phase -->
+		<execution>
+			<id>report</id>
+			<phase>test</phase>
+			<goals>
+				<goal>report</goal>
+			</goals>
+		</execution>
+	      </executions>
+	    </plugin>
         </plugins>
     </build>
     <dependencies>
