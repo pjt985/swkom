@@ -3,6 +3,7 @@ name: deploy
 on:
   # the 1st condition
   workflow_run:
+    workflow_dispatch:    
     workflows: ["tests"]
     branches: [main, dev]
     types:
