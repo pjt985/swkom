@@ -1,9 +1,9 @@
 package at.fhtw.swen3.services.mapper;
 
 import at.fhtw.swen3.OpenApiGeneratorApplication;
-import at.fhtw.swen3.persistence.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
 import at.fhtw.swen3.persistence.entity.RecipientEntity;
+import at.fhtw.swen3.services.dto.*;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -20,7 +20,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ParcelMapperTest {
 
     @Test
-    void testDTO2Entity() {
+    void testParcelDTO2Entity() {
         Recipient recipient = new Recipient();
         recipient.setStreet("Hauptstraße 12/12/12");
         recipient.setCountry("Austria");
@@ -66,6 +66,42 @@ class ParcelMapperTest {
     }
 
     @Test
+    void TestRecipientEntityToDto() {
+        RecipientEntity recipientEntity = new RecipientEntity();
+        recipientEntity.setStreet("Hauptstraße 12/12/12");
+        recipientEntity.setCountry("Austria");
+        recipientEntity.setCity("Wien");
+        recipientEntity.setPostalCode("A-1100");
+        recipientEntity.setName("Wien");
+
+        Recipient recipient = RecipientMapper.INSTANCE.entityToDto(recipientEntity);
+
+        assertEquals(recipient.getStreet(), recipientEntity.getStreet());
+        assertEquals(recipient.getCountry(), recipientEntity.getCountry());
+        assertEquals(recipient.getCity(), recipientEntity.getCity());
+        assertEquals(recipient.getPostalCode(), recipientEntity.getPostalCode());
+        assertEquals(recipient.getName(), recipientEntity.getName());
+    }
+
+    @Test
+    void TestRecipientDtoToEntity() {
+        Recipient recipient = new Recipient();
+        recipient.setStreet("Hauptstraße 12/12/12");
+        recipient.setCountry("Austria");
+        recipient.setCity("Wien");
+        recipient.setPostalCode("A-1100");
+        recipient.setName("Wien");
+
+        RecipientEntity recipientEntity = RecipientMapper.INSTANCE.dtoToEntity(recipient);
+
+        assertEquals(recipient.getStreet(), recipientEntity.getStreet());
+        assertEquals(recipient.getCountry(), recipientEntity.getCountry());
+        assertEquals(recipient.getCity(), recipientEntity.getCity());
+        assertEquals(recipient.getPostalCode(), recipientEntity.getPostalCode());
+        assertEquals(recipient.getName(), recipientEntity.getName());
+    }
+
+    @Test
     void testValidationTrue() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
@@ -75,7 +111,7 @@ class ParcelMapperTest {
         recipient.setCountry("Austria");
         recipient.setCity("Wien");
         recipient.setPostalCode("A-1100");
-        recipient.setName("Wien");
+        recipient.setName("Mustermann");
 
         Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
         assertFalse(violations.isEmpty());

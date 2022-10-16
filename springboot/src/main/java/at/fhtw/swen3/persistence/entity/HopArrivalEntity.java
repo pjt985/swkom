@@ -1,11 +1,9 @@
 package at.fhtw.swen3.persistence.entity;
 
-import at.fhtw.swen3.persistence.HopArrival;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Pattern;
 import java.time.OffsetDateTime;
 
