@@ -1,6 +1,7 @@
 package Sprint2Test;
 
 
+import at.fhtw.swen3.OpenApiGeneratorApplication;
 import at.fhtw.swen3.persistence.*;
 import at.fhtw.swen3.services.mapper.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
@@ -18,7 +19,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-@SpringBootTest
+@SpringBootTest(classes = OpenApiGeneratorApplication.class)
 public class ParcelEntityTest {
 
     private final Validator validator = (Validator) Validation.buildDefaultValidatorFactory().getValidator();
