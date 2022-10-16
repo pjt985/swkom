@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="i am going through changes&#10;fixed my idea so it works with maven" />
+    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="i am going through changes&#10;fixed my idea so it works with maven">
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +135,7 @@
       <workItem from="1665915550192" duration="442000" />
       <workItem from="1665916025361" duration="53000" />
       <workItem from="1665916107482" duration="459000" />
-      <workItem from="1665916608047" duration="13699000" />
+      <workItem from="1665916608047" duration="13860000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>

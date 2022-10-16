@@ -23,23 +23,22 @@ public class ParcelEntityTest {
 
     private final Validator validator = (Validator) Validation.buildDefaultValidatorFactory().getValidator();
 
-    private Recipient recipient;
+    static private Recipient recipient;
 
-    private Recipient sender;
+    static private Recipient sender;
+    static private HopArrival visitedHopArrival;
+    static private HopArrival futureHopArrival;
 
-    private HopArrival visitedHopArrival;
-    private HopArrival futureHopArrival;
+    static private Parcel parcel;
 
-    private Parcel parcel;
+    static private NewParcelInfo newParcelInfo;
 
-    private NewParcelInfo newParcelInfo;
-
-    private LinkedList<HopArrival> visitedHopArrivals;
-    private LinkedList<HopArrival> futureHopArrivals;
-    private TrackingInformation trackingInformation;
-    private ParcelMapper mapper;
+    static private LinkedList<HopArrival> visitedHopArrivals;
+    static private LinkedList<HopArrival> futureHopArrivals;
+    static private TrackingInformation trackingInformation;
+    static private ParcelMapper mapper;
     @BeforeAll
-    void setUp(){
+    static void setUp(){
         recipient = Recipient.builder().
                 street("Hauptstraße 12/12/12").
                 country("Austria").
