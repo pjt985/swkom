@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.11" />
+    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.13">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -142,7 +145,7 @@
       <workItem from="1665915550192" duration="442000" />
       <workItem from="1665916025361" duration="53000" />
       <workItem from="1665916107482" duration="459000" />
-      <workItem from="1665916608047" duration="16435000" />
+      <workItem from="1665916608047" duration="17541000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
@@ -165,7 +168,21 @@
       <option name="project" value="LOCAL" />
       <updated>1665932937301</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="sprint test 2.12">
+      <created>1665933197880</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1665933197880</updated>
+    </task>
+    <task id="LOCAL-00005" summary="sprint test 2.13">
+      <created>1665933384840</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1665933384840</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -187,17 +204,8 @@
     <MESSAGE value="i am going through changes&#10;fixed my idea so it works with maven" />
     <MESSAGE value="sprint test 2.10" />
     <MESSAGE value="sprint test 2.11" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint test 2.11" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java</url>
-          <line>93</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="sprint test 2.12" />
+    <MESSAGE value="sprint test 2.13" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint test 2.13" />
   </component>
 </project>

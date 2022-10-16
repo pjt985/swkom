@@ -7,6 +7,7 @@ import at.fhtw.swen3.services.mapper.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
 import org.junit.jupiter.api.BeforeAll;
 import org.mapstruct.factory.Mappers;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;
 
@@ -23,23 +24,26 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class ParcelEntityTest {
 
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-    private ParcelEntity pe;
-    private Recipient recipient;
+    @Autowired
+    static private ParcelMapper mapper;
+    @Autowired
+    static private ParcelEntity pe;
+    static private Recipient recipient;
 
-    private Recipient sender;
-    private HopArrival visitedHopArrival;
-    private HopArrival futureHopArrival;
+    static private Recipient sender;
+    static private HopArrival visitedHopArrival;
+    static private HopArrival futureHopArrival;
 
-    private Parcel parcel;
+    static private Parcel parcel;
 
-    private NewParcelInfo newParcelInfo;
+    static private NewParcelInfo newParcelInfo;
 
-    private LinkedList<HopArrival> visitedHopArrivals;
-    private LinkedList<HopArrival> futureHopArrivals;
-    private TrackingInformation trackingInformation;
+    static private LinkedList<HopArrival> visitedHopArrivals;
+    static private LinkedList<HopArrival> futureHopArrivals;
+    static private TrackingInformation trackingInformation;
 
-
-    void setUp(){
+    @BeforeAll
+    static void setUp(){
 
         recipient = Recipient.builder().
                 street("Hauptstraße 12/12/12").
@@ -82,19 +86,18 @@ public class ParcelEntityTest {
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
         //mapper = ParcelMapper.TEST_INSTANCE;
-        pe = ParcelMapper.INSTANCE.from(parcel, newParcelInfo, trackingInformation);
+        mapper = ParcelMapper.INSTANCE;
     }
 
     @Test
     void validationTest(){
-        setUp();
         Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
         assertFalse(violations.isEmpty());
     }
 
     @Test
     void mapperTest() {
-        setUp();
+        pe = mapper.from(parcel, newParcelInfo, trackingInformation);
         assertEquals(pe.getWeight(), parcel.getWeight());
         assertEquals(pe.getVisitedHops().size(), trackingInformation.getVisitedHops().size());
     }

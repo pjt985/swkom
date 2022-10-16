@@ -27,5 +27,6 @@
     <orderEntry type="module" module-name="main" scope="TEST" />
     <orderEntry type="library" scope="TEST" name="Maven: org.mapstruct:mapstruct:1.5.2.Final" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-beans:5.3.20" level="project" />
   </component>
 </module>
