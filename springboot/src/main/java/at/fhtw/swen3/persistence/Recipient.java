@@ -5,6 +5,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import lombok.Builder;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -19,22 +20,28 @@ import javax.annotation.Generated;
  * Recipient
  */
 
+@Builder
 @JsonTypeName("recipient")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-09-25T18:14:30.832848Z[Etc/UTC]")
 public class Recipient {
 
+  @Pattern(regexp = "^[[:upper:]][[:lower:]]*ß*[[:lower:]]*\\/*-*\\d*\\/*[[:lower:]]*$")
   @JsonProperty("name")
   private String name;
 
+  @Pattern(regexp = "^[[:upper:]][[:lower:]]*ß*[[:lower:]]*\\s\\d+\\/*[[:alpha:]]*\\d*\\/*\\d*$")
   @JsonProperty("street")
   private String street;
 
+  @Pattern(regexp = "^A-\\d\\d\\d\\d$")
   @JsonProperty("postalCode")
   private String postalCode;
 
+  @Pattern(regexp = "^[[:upper:]][[:lower:]]*ß*[[:lower:]]*\\/*-*\\d*\\/*[[:lower:]]*$")
   @JsonProperty("city")
   private String city;
 
+  @Pattern(regexp = "[ÖÄÜA-Z][[:lower:]]+$")
   @JsonProperty("country")
   private String country;
 

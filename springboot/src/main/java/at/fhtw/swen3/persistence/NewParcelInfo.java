@@ -5,6 +5,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonTypeName;
+import lombok.Builder;
 import org.openapitools.jackson.nullable.JsonNullable;
 import java.time.OffsetDateTime;
 import javax.validation.Valid;
@@ -18,11 +19,12 @@ import javax.annotation.Generated;
 /**
  * NewParcelInfo
  */
-
+@Builder
 @JsonTypeName("newParcelInfo")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-09-25T18:14:30.832848Z[Etc/UTC]")
 public class NewParcelInfo {
 
+  @Pattern(regexp = " ^[A-Z0-9]{9}$")
   @JsonProperty("trackingId")
   private String trackingId;
 

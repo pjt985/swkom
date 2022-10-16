@@ -46,23 +46,23 @@ public interface ParcelApi {
     }
 
     /**
-     * POST /parcel/{trackingId}/reportDelivery/ : Report that a Parcel has been delivered at it&#39;s final destination address. 
+     * POST /parcel/{trackingId}/reportDelivery/ : Report that a ParcelEntity has been delivered at it&#39;s final destination address.
      *
      * @param trackingId The tracking ID of the parcel. E.g. PYJRB4HZ6  (required)
      * @return Successfully reported hop. (status code 200)
      *         or The operation failed due to an error. (status code 400)
-     *         or Parcel does not exist with this tracking ID.  (status code 404)
+     *         or ParcelEntity does not exist with this tracking ID.  (status code 404)
      */
     @Operation(
         operationId = "reportParcelDelivery",
-        summary = "Report that a Parcel has been delivered at it's final destination address. ",
+        summary = "Report that a ParcelEntity has been delivered at it's final destination address. ",
         tags = { "staff" },
         responses = {
             @ApiResponse(responseCode = "200", description = "Successfully reported hop."),
             @ApiResponse(responseCode = "400", description = "The operation failed due to an error.", content = {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = Error.class))
             }),
-            @ApiResponse(responseCode = "404", description = "Parcel does not exist with this tracking ID. ")
+            @ApiResponse(responseCode = "404", description = "ParcelEntity does not exist with this tracking ID. ")
         }
     )
     @RequestMapping(
@@ -79,21 +79,21 @@ public interface ParcelApi {
 
 
     /**
-     * POST /parcel/{trackingId}/reportHop/{code} : Report that a Parcel has arrived at a certain hop either Warehouse or Truck. 
+     * POST /parcel/{trackingId}/reportHop/{code} : Report that a ParcelEntity has arrived at a certain hop either Warehouse or Truck.
      *
      * @param trackingId The tracking ID of the parcel. E.g. PYJRB4HZ6  (required)
      * @param code The Code of the hop (Warehouse or Truck). (required)
      * @return Successfully reported hop. (status code 200)
-     *         or Parcel does not exist with this tracking ID or hop with code not found.  (status code 404)
+     *         or ParcelEntity does not exist with this tracking ID or hop with code not found.  (status code 404)
      *         or The operation failed due to an error. (status code 400)
      */
     @Operation(
         operationId = "reportParcelHop",
-        summary = "Report that a Parcel has arrived at a certain hop either Warehouse or Truck. ",
+        summary = "Report that a ParcelEntity has arrived at a certain hop either Warehouse or Truck. ",
         tags = { "staff" },
         responses = {
             @ApiResponse(responseCode = "200", description = "Successfully reported hop."),
-            @ApiResponse(responseCode = "404", description = "Parcel does not exist with this tracking ID or hop with code not found. "),
+            @ApiResponse(responseCode = "404", description = "ParcelEntity does not exist with this tracking ID or hop with code not found. "),
             @ApiResponse(responseCode = "400", description = "The operation failed due to an error.", content = {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = Error.class))
             })
@@ -144,7 +144,7 @@ public interface ParcelApi {
         consumes = { "application/json" }
     )
     default ResponseEntity<NewParcelInfo> submitParcel(
-        @Parameter(name = "Parcel", description = "", required = true) @Valid @RequestBody Parcel parcel
+        @Parameter(name = "ParcelEntity", description = "", required = true) @Valid @RequestBody Parcel parcel
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {
@@ -164,22 +164,22 @@ public interface ParcelApi {
      * GET /parcel/{trackingId} : Find the latest state of a parcel by its tracking ID. 
      *
      * @param trackingId The tracking ID of the parcel. E.g. PYJRB4HZ6  (required)
-     * @return Parcel exists, here&#39;s the tracking information. (status code 200)
+     * @return ParcelEntity exists, here&#39;s the tracking information. (status code 200)
      *         or The operation failed due to an error. (status code 400)
-     *         or Parcel does not exist with this tracking ID. (status code 404)
+     *         or ParcelEntity does not exist with this tracking ID. (status code 404)
      */
     @Operation(
         operationId = "trackParcel",
         summary = "Find the latest state of a parcel by its tracking ID. ",
         tags = { "recipient" },
         responses = {
-            @ApiResponse(responseCode = "200", description = "Parcel exists, here's the tracking information.", content = {
+            @ApiResponse(responseCode = "200", description = "ParcelEntity exists, here's the tracking information.", content = {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = TrackingInformation.class))
             }),
             @ApiResponse(responseCode = "400", description = "The operation failed due to an error.", content = {
                 @Content(mediaType = "application/json", schema = @Schema(implementation = Error.class))
             }),
-            @ApiResponse(responseCode = "404", description = "Parcel does not exist with this tracking ID.")
+            @ApiResponse(responseCode = "404", description = "ParcelEntity does not exist with this tracking ID.")
         }
     )
     @RequestMapping(
@@ -235,7 +235,7 @@ public interface ParcelApi {
     )
     default ResponseEntity<NewParcelInfo> transitionParcel(
         @Pattern(regexp = "^[A-Z0-9]{9}$") @Parameter(name = "trackingId", description = "The tracking ID of the parcel. E.g. PYJRB4HZ6 ", required = true) @PathVariable("trackingId") String trackingId,
-        @Parameter(name = "Parcel", description = "", required = true) @Valid @RequestBody Parcel parcel
+        @Parameter(name = "ParcelEntity", description = "", required = true) @Valid @RequestBody Parcel parcel
     ) {
         getRequest().ifPresent(request -> {
             for (MediaType mediaType: MediaType.parseMediaTypes(request.getHeader("Accept"))) {

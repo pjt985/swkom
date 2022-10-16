@@ -7,5 +7,25 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" scope="TEST">
+      <library name="testng">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../../lib/testng-7.1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/jcommander-1.72.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/guice-4.1.0-no_aop.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/javax.inject-1.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/aopalliance-1.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/guava-19.0.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../lib/snakeyaml-1.21.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test:2.7.0" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.junit.jupiter:junit-jupiter-api:5.8.2" level="project" />
+    <orderEntry type="module" module-name="main" scope="TEST" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.mapstruct:mapstruct:1.5.2.Final" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: javax.validation:validation-api:2.0.1.Final" level="project" />
   </component>
 </module>
