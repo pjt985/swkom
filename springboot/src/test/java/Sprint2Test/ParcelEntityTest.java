@@ -20,7 +20,7 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 
-@SpringBootTest(classes = OpenApiGeneratorApplication.class)
+//@SpringBootTest(classes = OpenApiGeneratorApplication.class)
 public class ParcelEntityTest {
 
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
@@ -115,6 +115,8 @@ public class ParcelEntityTest {
                 state(TrackingInformation.StateEnum.PICKUP).
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
+
+
 
         ParcelEntity pe = ParcelMapper.INSTANCE.dtoToEntity(parcel, newParcelInfo, trackingInformation);
         assertEquals(pe.getWeight(), parcel.getWeight());
