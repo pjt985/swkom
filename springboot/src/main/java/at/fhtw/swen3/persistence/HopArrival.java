@@ -22,16 +22,13 @@ import javax.annotation.Generated;
 /**
  * HopArrival
  */
-@Builder
 @JsonTypeName("hopArrival")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-09-25T18:14:30.832848Z[Etc/UTC]")
 public class HopArrival {
 
-  @Pattern(regexp = "^[A-Z]{4}\\d{1,4}$")
   @JsonProperty("code")
   private String code;
 
-  @Pattern(regexp = "^[ÖÄÜA-Z][[:lower:]]+\\s\\d*-*\\d*$")
   @JsonProperty("description")
   private String description;
 
@@ -48,7 +45,6 @@ public class HopArrival {
    * Unique CODE of the hop.
    * @return code
   */
-  @NotNull @Pattern(regexp = "^[A-Z]{4}\\d{1,4}$") 
   @Schema(name = "code", description = "Unique CODE of the hop.", required = true)
   public String getCode() {
     return code;

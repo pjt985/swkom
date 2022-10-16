@@ -19,12 +19,10 @@ import javax.annotation.Generated;
 /**
  * NewParcelInfo
  */
-@Builder
 @JsonTypeName("newParcelInfo")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-09-25T18:14:30.832848Z[Etc/UTC]")
 public class NewParcelInfo {
 
-  @Pattern(regexp = " ^[A-Z0-9]{9}$")
   @JsonProperty("trackingId")
   private String trackingId;
 

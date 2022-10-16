@@ -14,7 +14,7 @@ import java.util.List;
 public class ParcelEntity {
 
     // Parcel
-    @NotNull
+    @PositiveOrZero
     private Float weight;
     @NotNull
     private Recipient recipient;
@@ -22,7 +22,7 @@ public class ParcelEntity {
     private Recipient sender;
 
     // NewParcelInfo
-    @NotBlank
+    @Pattern(regexp = " ^[A-Z0-9]{9}$")
     private String trackingId;
 
     // TrackingInformation

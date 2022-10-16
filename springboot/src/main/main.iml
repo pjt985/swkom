@@ -31,5 +31,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Maven: org.mapstruct:mapstruct:1.5.2.Final" level="project" />
+    <orderEntry type="library" name="Maven: com.fasterxml.jackson.core:jackson-annotations:2.14.0-rc1" level="project" />
   </component>
 </module>
