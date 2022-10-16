@@ -20,7 +20,7 @@ public interface ParcelMapper {
     @Mapping(source="trackingInformation.futureHops", target = "futureHops")
     @Mapping(source="trackingInformation.visitedHops", target = "visitedHops")
     ParcelEntity dtoToEntity(Parcel parcel, NewParcelInfo newParcelInfo, TrackingInformation trackingInformation);
-    Parcel EntityToDtoParcel(ParcelEntity parcelEntity);
-    NewParcelInfo EntityToDtoNewParcelInfo(ParcelEntity parcelEntity);
-    TrackingInformation EntityToDtoTrackingInformation(ParcelEntity parcelEntity);
+    //Parcel EntityToDtoParcel(ParcelEntity parcelEntity);
+    //NewParcelInfo EntityToDtoNewParcelInfo(ParcelEntity parcelEntity);
+    //TrackingInformation EntityToDtoTrackingInformation(ParcelEntity parcelEntity);
 }
