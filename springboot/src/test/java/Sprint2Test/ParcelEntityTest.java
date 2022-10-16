@@ -22,8 +22,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 @SpringBootTest(classes = OpenApiGeneratorApplication.class)
 public class ParcelEntityTest {
 
-    private final Validator validator = (Validator) Validation.buildDefaultValidatorFactory().getValidator();
- //   static private ParcelMapper mapper;
+    private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
     static private Recipient recipient;
 
     static private Recipient sender;
@@ -92,8 +91,7 @@ public class ParcelEntityTest {
 
     @Test
     void mapperTest() {
-        ParcelMapper m = Mappers.getMapper( ParcelMapper.class );
-        ParcelEntity pe = m.from(parcel, newParcelInfo, trackingInformation);
+        ParcelEntity pe = ParcelMapper.INSTANCE.from(parcel, newParcelInfo, trackingInformation);
         assertEquals(pe.getWeight(), parcel.getWeight());
         assertEquals(pe.getVisitedHops().size(), trackingInformation.getVisitedHops().size());
     }

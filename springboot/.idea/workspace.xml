@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="i am going through changes&#10;fixed my idea so it works with maven">
+    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.10">
+      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/ParcelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/ParcelMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -144,7 +145,7 @@
       <workItem from="1665915550192" duration="442000" />
       <workItem from="1665916025361" duration="53000" />
       <workItem from="1665916107482" duration="459000" />
-      <workItem from="1665916608047" duration="15711000" />
+      <workItem from="1665916608047" duration="16029000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
@@ -153,7 +154,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665918178119</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="sprint test 2.10">
+      <created>1665932350353</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1665932350353</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,14 +181,15 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="i am going through changes&#10;fixed my idea so it works with maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="i am going through changes&#10;fixed my idea so it works with maven" />
+    <MESSAGE value="sprint test 2.10" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint test 2.10" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java</url>
-          <line>95</line>
+          <line>93</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>
