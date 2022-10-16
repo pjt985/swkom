@@ -4,10 +4,10 @@ package Sprint2Test;
 import at.fhtw.swen3.persistence.*;
 import at.fhtw.swen3.services.mapper.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
+import org.junit.jupiter.api.BeforeAll;
 import org.mapstruct.factory.Mappers;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;
-import org.testng.annotations.BeforeTest;
 
 import javax.validation.ConstraintViolation;
 import javax.validation.Validator;
@@ -38,7 +38,7 @@ public class ParcelEntityTest {
     private LinkedList<HopArrival> futureHopArrivals;
     private TrackingInformation trackingInformation;
     private ParcelMapper mapper;
-    @BeforeTest
+    @BeforeAll
     void setUp(){
         recipient = Recipient.builder().
                 street("Hauptstraße 12/12/12").
