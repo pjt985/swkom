@@ -25,27 +25,10 @@ public class ParcelEntityTest {
 
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
 
-    private ParcelMapper mapper = ParcelMapper.INSTANCE;
-    @Autowired
-    static private ParcelEntity pe;
-    static private Recipient recipient;
 
-    static private Recipient sender;
-    static private HopArrival visitedHopArrival;
-    static private HopArrival futureHopArrival;
-
-    static private Parcel parcel;
-
-    static private NewParcelInfo newParcelInfo;
-
-    static private LinkedList<HopArrival> visitedHopArrivals;
-    static private LinkedList<HopArrival> futureHopArrivals;
-    static private TrackingInformation trackingInformation;
-
-    @BeforeAll
-    static void setUp(){
-
-        recipient = Recipient.builder().
+    @Test
+    void validationTest(){
+        Recipient recipient = Recipient.builder().
                 street("Hauptstraße 12/12/12").
                 country("Austria").
                 city("Wien").
@@ -53,50 +36,87 @@ public class ParcelEntityTest {
                 name("Wien").
                 build();
 
-        sender = Recipient.builder().
+        Recipient sender = Recipient.builder().
                 street("Landstraße 27a").
                 country("Austria").
                 city("Wien").
                 postalCode("A-1100").
                 name("Wien").build();
 
-        visitedHopArrival = HopArrival.builder().
+        HopArrival visitedHopArrival = HopArrival.builder().
                 code("AAAA1").
                 description("Warehouse 27-12)").build();
 
-        futureHopArrival = HopArrival.builder().
+        HopArrival futureHopArrival = HopArrival.builder().
                 code("BBBB2").
                 description("Warehouse 22-24)").build();
 
-        parcel = Parcel.builder().
+        Parcel parcel = Parcel.builder().
                 recipient(recipient).
                 sender(sender).
                 weight(12.0F).build();
 
-        newParcelInfo = NewParcelInfo.builder().
+        NewParcelInfo newParcelInfo = NewParcelInfo.builder().
                 trackingId("123456789").build();
 
-        visitedHopArrivals = new LinkedList<>();
+        LinkedList<HopArrival> visitedHopArrivals = new LinkedList<>();
         visitedHopArrivals.add(visitedHopArrival);
-        futureHopArrivals = new LinkedList<>();
+        LinkedList<HopArrival> futureHopArrivals = new LinkedList<>();
         futureHopArrivals.add(futureHopArrival);
 
-        trackingInformation = TrackingInformation.builder().
+        TrackingInformation trackingInformation = TrackingInformation.builder().
                 state(TrackingInformation.StateEnum.PICKUP).
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
-        //mapper = ParcelMapper.TEST_INSTANCE;
-    }
 
-    @Test
-    void validationTest(){
         Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
         assertFalse(violations.isEmpty());
     }
 
     @Test
     void mapperTest() {
-        pe = mapper.from(parcel, newParcelInfo, trackingInformation);
+        Recipient recipient = Recipient.builder().
+                street("Hauptstraße 12/12/12").
+                country("Austria").
+                city("Wien").
+                postalCode("A-1100").
+                name("Wien").
+                build();
+
+        Recipient sender = Recipient.builder().
+                street("Landstraße 27a").
+                country("Austria").
+                city("Wien").
+                postalCode("A-1100").
+                name("Wien").build();
+
+        HopArrival visitedHopArrival = HopArrival.builder().
+                code("AAAA1").
+                description("Warehouse 27-12)").build();
+
+        HopArrival futureHopArrival = HopArrival.builder().
+                code("BBBB2").
+                description("Warehouse 22-24)").build();
+
+        Parcel parcel = Parcel.builder().
+                recipient(recipient).
+                sender(sender).
+                weight(12.0F).build();
+
+        NewParcelInfo newParcelInfo = NewParcelInfo.builder().
+                trackingId("123456789").build();
+
+        LinkedList<HopArrival> visitedHopArrivals = new LinkedList<>();
+        visitedHopArrivals.add(visitedHopArrival);
+        LinkedList<HopArrival> futureHopArrivals = new LinkedList<>();
+        futureHopArrivals.add(futureHopArrival);
+
+        TrackingInformation trackingInformation = TrackingInformation.builder().
+                state(TrackingInformation.StateEnum.PICKUP).
+                futureHops(futureHopArrivals).
+                visitedHops(visitedHopArrivals).build();
+
+        ParcelEntity pe = ParcelMapper.INSTANCE.from(parcel, newParcelInfo, trackingInformation);
         assertEquals(pe.getWeight(), parcel.getWeight());
         assertEquals(pe.getVisitedHops().size(), trackingInformation.getVisitedHops().size());
     }
