@@ -102,22 +102,6 @@ class ParcelMapperTest {
     }
 
     @Test
-    void testValidationTrue() {
-        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
-        Validator validator = factory.getValidator();
-
-        RecipientEntity recipient = new RecipientEntity();
-        recipient.setStreet("Hauptstraße 12");
-        recipient.setCountry("Austria");
-        recipient.setCity("Wien");
-        recipient.setPostalCode("A-1100");
-        recipient.setName("Mustermann");
-
-        Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
-        assertFalse(violations.isEmpty());
-    }
-
-    @Test
     void testValidationFalse() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
