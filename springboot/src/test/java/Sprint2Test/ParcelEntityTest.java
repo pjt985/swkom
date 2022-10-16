@@ -84,15 +84,17 @@ public class ParcelEntityTest {
     }
 
     @Test
+    void validationTest(){
+        Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
+        assertFalse(violations.isEmpty());
+    }
+    
+    @Test
     void mapperTest() {
         ParcelEntity pe = ParcelMapper.INSTANCE.from(parcel, newParcelInfo, trackingInformation);
         assertEquals(pe.getWeight(), parcel.getWeight());
         assertEquals(pe.getVisitedHops().size(), trackingInformation.getVisitedHops().size());
     }
 
-    @Test
-    void validationTest(){
-        Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
-        assertFalse(violations.isEmpty());
-    }
+
 }
