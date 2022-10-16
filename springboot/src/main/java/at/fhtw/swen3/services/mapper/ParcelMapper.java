@@ -10,6 +10,7 @@ import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface ParcelMapper {
+    static ParcelMapper TEST_INSTANCE = Mappers.getMapper( ParcelMapper.class );
     ParcelMapper INSTANCE = Mappers.getMapper( ParcelMapper.class );
 
     @Mapping(source="parcel.weight", target = "weight")

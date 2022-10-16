@@ -81,7 +81,7 @@ public class ParcelEntityTest {
                 state(TrackingInformation.StateEnum.PICKUP).
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
-        mapper = ParcelMapper.INSTANCE;
+        mapper = ParcelMapper.TEST_INSTANCE;
     }
 
     @Test
