@@ -24,8 +24,8 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class ParcelEntityTest {
 
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-    @Autowired
-    static private ParcelMapper mapper = ParcelMapper.INSTANCE;
+
+    private ParcelMapper mapper = ParcelMapper.INSTANCE;
     @Autowired
     static private ParcelEntity pe;
     static private Recipient recipient;
