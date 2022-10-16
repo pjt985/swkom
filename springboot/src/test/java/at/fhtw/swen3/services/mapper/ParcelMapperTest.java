@@ -11,8 +11,8 @@ class ParcelMapperTest {
 
     @Test
     void dtoToEntity() {
-        //ParcelMapper mapper = ParcelMapper.INSTANCE;
-        //System.out.println(mapper);
+        ParcelMapper mapper = ParcelMapper.INSTANCE;
+        System.out.println(mapper);
         assertEquals(1,1);
     }
 
