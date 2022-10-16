@@ -3,6 +3,7 @@ package at.fhtw.swen3.services.mapper;
 import at.fhtw.swen3.OpenApiGeneratorApplication;
 import at.fhtw.swen3.persistence.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
+import at.fhtw.swen3.persistence.entity.RecipientEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -65,34 +66,34 @@ class ParcelMapperTest {
     }
 
     @Test
-    void testValidation1() {
+    void testValidationTrue() {
         ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
         Validator validator = factory.getValidator();
 
-        Recipient recipient = new Recipient();
+        RecipientEntity recipient = new RecipientEntity();
         recipient.setStreet("Hauptstraße 12/12/12");
         recipient.setCountry("Austria");
         recipient.setCity("Wien");
         recipient.setPostalCode("A-1100");
         recipient.setName("Wien");
 
-        Recipient sender = new Recipient();
-        sender.setStreet("Landstraße 27a");
-        sender.setCountry("Austria");
-        sender.setCity("Wien");
-        sender.setPostalCode("A-1100");
-        sender.setName("Wien");
-
-        Parcel parcel = new Parcel();
-        parcel.setRecipient(recipient);
-        parcel.setSender(sender);
-        parcel.setWeight(12.0F);
-
-        Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
+        Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
         assertTrue(violations.isEmpty());
-        //assertEquals(1,1);
     }
 
-    //       Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
-    //      assertFalse(violations.isEmpty());
+    @Test
+    void testValidationFalse() {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+
+        RecipientEntity recipient = new RecipientEntity();
+        recipient.setStreet("Hauptstraße 12/12/12");
+        recipient.setCountry("Austria");
+        recipient.setCity("Wien");
+        recipient.setPostalCode("B-1100");
+        recipient.setName("Wien");
+
+        Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
+        assertFalse(violations.isEmpty());
+    }
 }
