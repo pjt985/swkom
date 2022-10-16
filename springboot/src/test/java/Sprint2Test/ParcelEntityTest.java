@@ -23,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertFalse;
 public class ParcelEntityTest {
 
     private final Validator validator = (Validator) Validation.buildDefaultValidatorFactory().getValidator();
-
+    private final ParcelMapper mapper = Mappers.getMapper(ParcelMapper.class);;
     static private Recipient recipient;
 
     static private Recipient sender;
@@ -37,7 +37,7 @@ public class ParcelEntityTest {
     static private LinkedList<HopArrival> visitedHopArrivals;
     static private LinkedList<HopArrival> futureHopArrivals;
     static private TrackingInformation trackingInformation;
-    static private ParcelMapper mapper;
+
     @BeforeAll
     static void setUp(){
         recipient = Recipient.builder().
@@ -80,8 +80,6 @@ public class ParcelEntityTest {
                 state(TrackingInformation.StateEnum.PICKUP).
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
-
-        mapper = Mappers.getMapper(ParcelMapper.class);
     }
 
     @Test

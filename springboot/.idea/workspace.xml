@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="i am going through changes&#10;fixed my idea so it works with maven">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,7 +80,7 @@
       <command value="mvn dependency:resolve" />
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JAR Application.openapi-spring-1.22.1.jar">
     <configuration default="true" type="Babashka" factoryName="BabashkaLocalRepl" activateToolWindowBeforeRun="false">
       <setting name="displayName" value="" />
       <setting name="bbPath" value="" />
@@ -116,6 +117,10 @@
       <setting name="focusEditor" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="openapi-spring-1.22.1.jar" type="JarApplication" temporary="true">
+      <option name="JAR_PATH" value="$PROJECT_DIR$/target/openapi-spring-1.22.1.jar" />
+      <method v="2" />
+    </configuration>
     <configuration name="OpenApiGeneratorApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="openapi-spring" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="at.fhtw.swen3.OpenApiGeneratorApplication" />
@@ -123,6 +128,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JAR Application.openapi-spring-1.22.1.jar" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -135,7 +145,7 @@
       <workItem from="1665915550192" duration="442000" />
       <workItem from="1665916025361" duration="53000" />
       <workItem from="1665916107482" duration="459000" />
-      <workItem from="1665916608047" duration="14089000" />
+      <workItem from="1665916608047" duration="14342000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
