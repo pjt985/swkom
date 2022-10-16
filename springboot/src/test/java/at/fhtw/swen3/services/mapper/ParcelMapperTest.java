@@ -89,7 +89,7 @@ class ParcelMapperTest {
         parcel.setWeight(12.0F);
 
         Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
-        assertFalse(violations.isEmpty());
+        assertTrue(violations.isEmpty());
         //assertEquals(1,1);
     }
 
