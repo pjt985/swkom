@@ -107,7 +107,7 @@ class ParcelMapperTest {
         Validator validator = factory.getValidator();
 
         RecipientEntity recipient = new RecipientEntity();
-        recipient.setStreet("Hauptstraße 12/12/12");
+        recipient.setStreet("Hauptstraße 12");
         recipient.setCountry("Austria");
         recipient.setCity("Wien");
         recipient.setPostalCode("A-1100");
