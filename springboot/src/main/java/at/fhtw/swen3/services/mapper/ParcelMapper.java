@@ -12,13 +12,13 @@ import org.mapstruct.factory.Mappers;
 public interface ParcelMapper {
     ParcelMapper INSTANCE = Mappers.getMapper( ParcelMapper.class );
 
-    /*@Mapping(source="parcel.weight", target = "weight")
+    @Mapping(source="parcel.weight", target = "weight")
     @Mapping(source="parcel.recipient", target = "recipient")
     @Mapping(source="parcel.sender", target = "sender")
     @Mapping(source="newParcelInfo.trackingId", target = "trackingId")
     @Mapping(source="trackingInformation.state", target = "state")
     @Mapping(source="trackingInformation.futureHops", target = "futureHops")
-    @Mapping(source="trackingInformation.visitedHops", target = "visitedHops")*/
+    @Mapping(source="trackingInformation.visitedHops", target = "visitedHops")
     ParcelEntity dtoToEntity(Parcel parcel, NewParcelInfo newParcelInfo, TrackingInformation trackingInformation);
     Parcel EntityToDtoParcel(ParcelEntity parcelEntity);
     NewParcelInfo EntityToDtoNewParcelInfo(ParcelEntity parcelEntity);

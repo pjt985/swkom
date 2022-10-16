@@ -24,7 +24,6 @@ import javax.annotation.Generated;
 /**
  * TrackingInformation
  */
-@Builder
 @JsonTypeName("trackingInformation")
 @Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2022-09-25T18:14:30.832848Z[Etc/UTC]")
 public class TrackingInformation {
