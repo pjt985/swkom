@@ -25,7 +25,7 @@ public class ParcelEntityTest {
 
     private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
     @Autowired
-    static private ParcelMapper mapper;
+    static private ParcelMapper mapper = ParcelMapper.INSTANCE;
     @Autowired
     static private ParcelEntity pe;
     static private Recipient recipient;
@@ -86,7 +86,6 @@ public class ParcelEntityTest {
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
         //mapper = ParcelMapper.TEST_INSTANCE;
-        mapper = ParcelMapper.INSTANCE;
     }
 
     @Test
