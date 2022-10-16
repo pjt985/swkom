@@ -6,10 +6,11 @@ import at.fhtw.swen3.persistence.TrackingInformation;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
+import org.mapstruct.factory.Mappers;
 
 @Mapper
 public interface ParcelMapper {
-
+    ParcelMapper INSTANCE = Mappers.getMapper( ParcelMapper.class );
 
     @Mapping(source="parcel.weight", target = "weight")
     @Mapping(source="parcel.recipient", target = "recipient")
