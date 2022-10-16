@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.15">
+    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.16">
+      <change afterPath="$PROJECT_DIR$/src/test/java/at/fhtw/swen3/services/mapper/ParcelMapperTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Sprint2Test/ParcelEntityTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -68,6 +69,7 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="at.fhtw.swen3.services.mapper" />
       <recent name="at.fhtw.swen3.persistence.entity" />
     </key>
   </component>
@@ -144,7 +146,7 @@
       <workItem from="1665915550192" duration="442000" />
       <workItem from="1665916025361" duration="53000" />
       <workItem from="1665916107482" duration="459000" />
-      <workItem from="1665916608047" duration="19378000" />
+      <workItem from="1665916608047" duration="19669000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
@@ -216,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1665935792269</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="sprint test 2.16">
+      <created>1665936018333</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1665936018333</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,6 +251,7 @@
     <MESSAGE value="sprint test 2.13" />
     <MESSAGE value="sprint test 2.14" />
     <MESSAGE value="sprint test 2.15" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint test 2.15" />
+    <MESSAGE value="sprint test 2.16" />
+    <option name="LAST_COMMIT_MESSAGE" value="sprint test 2.16" />
   </component>
 </project>

@@ -1,33 +1,17 @@
-package Sprint2Test;
+package at.fhtw.swen3.services.mapper;
 
-
-import at.fhtw.swen3.OpenApiGeneratorApplication;
 import at.fhtw.swen3.persistence.*;
-import at.fhtw.swen3.services.mapper.*;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
-import org.junit.jupiter.api.BeforeAll;
-import org.mapstruct.factory.Mappers;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
 import org.junit.jupiter.api.Test;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.Validator;
-import javax.validation.Validation;
 import java.util.LinkedList;
-import java.util.Set;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.*;
 
-//@SpringBootTest(classes = OpenApiGeneratorApplication.class)
-public class ParcelEntityTest {
-
-    private final Validator validator = Validation.buildDefaultValidatorFactory().getValidator();
-
+class ParcelMapperTest {
 
     @Test
-    void validationTest(){
+    void dtoToEntity() {
         Recipient recipient = Recipient.builder().
                 street("Hauptstraße 12/12/12").
                 country("Austria").
@@ -69,14 +53,25 @@ public class ParcelEntityTest {
                 futureHops(futureHopArrivals).
                 visitedHops(visitedHopArrivals).build();
 
-        Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
-        assertFalse(violations.isEmpty());
+
+
+        ParcelEntity pe = ParcelMapper.INSTANCE.dtoToEntity(parcel, newParcelInfo, trackingInformation);
+        assertEquals(pe.getWeight(), parcel.getWeight());
+        assertEquals(pe.getVisitedHops().size(), trackingInformation.getVisitedHops().size());
     }
 
     @Test
-    void mapperTest() {
+    void entityToDtoParcel() {
         assertEquals(1,1);
     }
 
+    @Test
+    void entityToDtoNewParcelInfo() {
+        assertEquals(1,1);
+    }
 
+    @Test
+    void entityToDtoTrackingInformation() {
+        assertEquals(1,1);
+    }
 }
