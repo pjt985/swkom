@@ -6,7 +6,12 @@ import at.fhtw.swen3.persistence.entity.ParcelEntity;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import javax.validation.ConstraintViolation;
+import javax.validation.Validation;
+import javax.validation.Validator;
+import javax.validation.ValidatorFactory;
 import java.util.LinkedList;
+import java.util.Set;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -14,7 +19,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class ParcelMapperTest {
 
     @Test
-    void dtoToEntity() {
+    void testDTO2Entity() {
         Recipient recipient = new Recipient();
         recipient.setStreet("Hauptstraße 12/12/12");
         recipient.setCountry("Austria");
@@ -60,19 +65,34 @@ class ParcelMapperTest {
     }
 
     @Test
-    void entityToDtoParcel() {
-        assertEquals(1,1);
+    void testValidation1() {
+        ValidatorFactory factory = Validation.buildDefaultValidatorFactory();
+        Validator validator = factory.getValidator();
+
+        Recipient recipient = new Recipient();
+        recipient.setStreet("Hauptstraße 12/12/12");
+        recipient.setCountry("Austria");
+        recipient.setCity("Wien");
+        recipient.setPostalCode("A-1100");
+        recipient.setName("Wien");
+
+        Recipient sender = new Recipient();
+        sender.setStreet("Landstraße 27a");
+        sender.setCountry("Austria");
+        sender.setCity("Wien");
+        sender.setPostalCode("A-1100");
+        sender.setName("Wien");
+
+        Parcel parcel = new Parcel();
+        parcel.setRecipient(recipient);
+        parcel.setSender(sender);
+        parcel.setWeight(12.0F);
+
+        Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
+        assertFalse(violations.isEmpty());
+        //assertEquals(1,1);
     }
 
-    @Test
-    void entityToDtoNewParcelInfo() {
-        assertEquals(1,1);
-    }
-
-    @Test
-    void entityToDtoTrackingInformation() {
-        assertEquals(1,1);
-    }
     //       Set<ConstraintViolation<Parcel>> violations = validator.validate(parcel);
     //      assertFalse(violations.isEmpty());
 }
