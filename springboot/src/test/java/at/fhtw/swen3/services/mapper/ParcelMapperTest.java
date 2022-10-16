@@ -78,7 +78,7 @@ class ParcelMapperTest {
         recipient.setName("Wien");
 
         Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
-        assertTrue(violations.isEmpty());
+        assertFalse(violations.isEmpty());
     }
 
     @Test

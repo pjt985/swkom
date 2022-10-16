@@ -5,6 +5,8 @@ import at.fhtw.swen3.persistence.Recipient;
 import at.fhtw.swen3.persistence.TrackingInformation;
 import lombok.Getter;
 import lombok.Setter;
+
+import javax.validation.Valid;
 import javax.validation.constraints.*;
 
 import java.util.ArrayList;
@@ -16,10 +18,10 @@ public class ParcelEntity {
     // Parcel
     @PositiveOrZero
     private Float weight;
+    @Valid
+    private RecipientEntity recipient;
     @NotNull
-    private Recipient recipient;
-    @NotNull
-    private Recipient sender;
+    private RecipientEntity sender;
 
     // NewParcelInfo
     @Pattern(regexp = " ^[A-Z0-9]{9}$")
@@ -31,9 +33,9 @@ public class ParcelEntity {
     @NotNull
     private TrackingInformation.StateEnum state;
 
-    @NotNull
-    private List<HopArrival> futureHops = new ArrayList<>();
-    @NotNull
-    private List<HopArrival> visitedHops = new ArrayList<>();
+    @Valid
+    private List<HopArrivalEntity> futureHops = new ArrayList<>();
+    @Valid
+    private List<HopArrivalEntity> visitedHops = new ArrayList<>();
 
 }
