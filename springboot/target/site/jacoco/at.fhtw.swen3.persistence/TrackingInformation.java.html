@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>TrackingInformation.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">openapi-spring</a> &gt; <a href="index.source.html" class="el_package">at.fhtw.swen3.persistence</a> &gt; <span class="el_source">TrackingInformation.java</span></div><h1>TrackingInformation.java</h1><pre class="source lang-java linenums">package at.fhtw.swen3.persistence;
+
+import java.net.URI;
+import java.util.Objects;
+import at.fhtw.swen3.persistence.HopArrival;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonTypeName;
+import com.fasterxml.jackson.annotation.JsonValue;
+import java.util.ArrayList;
+import java.util.List;
+import org.openapitools.jackson.nullable.JsonNullable;
+import java.time.OffsetDateTime;
+import javax.validation.Valid;
+import javax.validation.constraints.*;
+import io.swagger.v3.oas.annotations.media.Schema;
+
+
+import java.util.*;
+import javax.annotation.Generated;
+
+/**
+ * TrackingInformation
+ */
+
+@JsonTypeName(&quot;trackingInformation&quot;)
+@Generated(value = &quot;org.openapitools.codegen.languages.SpringCodegen&quot;, date = &quot;2022-09-25T18:14:30.832848Z[Etc/UTC]&quot;)
+<span class="nc" id="L28">public class TrackingInformation {</span>
+
+  /**
+   * State of the parcel.
+   */
+<span class="nc" id="L33">  public enum StateEnum {</span>
+<span class="nc" id="L34">    PICKUP(&quot;Pickup&quot;),</span>
+    
+<span class="nc" id="L36">    INTRANSPORT(&quot;InTransport&quot;),</span>
+    
+<span class="nc" id="L38">    INTRUCKDELIVERY(&quot;InTruckDelivery&quot;),</span>
+    
+<span class="nc" id="L40">    TRANSFERRED(&quot;Transferred&quot;),</span>
+    
+<span class="nc" id="L42">    DELIVERED(&quot;Delivered&quot;);</span>
+
+    private String value;
+
+<span class="nc" id="L46">    StateEnum(String value) {</span>
+<span class="nc" id="L47">      this.value = value;</span>
+<span class="nc" id="L48">    }</span>
+
+    @JsonValue
+    public String getValue() {
+<span class="nc" id="L52">      return value;</span>
+    }
+
+    @Override
+    public String toString() {
+<span class="nc" id="L57">      return String.valueOf(value);</span>
+    }
+
+    @JsonCreator
+    public static StateEnum fromValue(String value) {
+<span class="nc bnc" id="L62" title="All 2 branches missed.">      for (StateEnum b : StateEnum.values()) {</span>
+<span class="nc bnc" id="L63" title="All 2 branches missed.">        if (b.value.equals(value)) {</span>
+<span class="nc" id="L64">          return b;</span>
+        }
+      }
+<span class="nc" id="L67">      throw new IllegalArgumentException(&quot;Unexpected value '&quot; + value + &quot;'&quot;);</span>
+    }
+  }
+
+  @JsonProperty(&quot;state&quot;)
+  private StateEnum state;
+
+<span class="nc" id="L74">  @JsonProperty(&quot;visitedHops&quot;)</span>
+  @Valid
+  private List&lt;HopArrival&gt; visitedHops = new ArrayList&lt;&gt;();
+
+<span class="nc" id="L78">  @JsonProperty(&quot;futureHops&quot;)</span>
+  @Valid
+  private List&lt;HopArrival&gt; futureHops = new ArrayList&lt;&gt;();
+
+  public TrackingInformation state(StateEnum state) {
+<span class="nc" id="L83">    this.state = state;</span>
+<span class="nc" id="L84">    return this;</span>
+  }
+
+  /**
+   * State of the parcel.
+   * @return state
+  */
+  @NotNull 
+  @Schema(name = &quot;state&quot;, description = &quot;State of the parcel.&quot;, required = true)
+  public StateEnum getState() {
+<span class="nc" id="L94">    return state;</span>
+  }
+
+  public void setState(StateEnum state) {
+<span class="nc" id="L98">    this.state = state;</span>
+<span class="nc" id="L99">  }</span>
+
+  public TrackingInformation visitedHops(List&lt;HopArrival&gt; visitedHops) {
+<span class="nc" id="L102">    this.visitedHops = visitedHops;</span>
+<span class="nc" id="L103">    return this;</span>
+  }
+
+  public TrackingInformation addVisitedHopsItem(HopArrival visitedHopsItem) {
+<span class="nc" id="L107">    this.visitedHops.add(visitedHopsItem);</span>
+<span class="nc" id="L108">    return this;</span>
+  }
+
+  /**
+   * Hops visited in the past.
+   * @return visitedHops
+  */
+  @NotNull @Valid 
+  @Schema(name = &quot;visitedHops&quot;, description = &quot;Hops visited in the past.&quot;, required = true)
+  public List&lt;HopArrival&gt; getVisitedHops() {
+<span class="nc" id="L118">    return visitedHops;</span>
+  }
+
+  public void setVisitedHops(List&lt;HopArrival&gt; visitedHops) {
+<span class="nc" id="L122">    this.visitedHops = visitedHops;</span>
+<span class="nc" id="L123">  }</span>
+
+  public TrackingInformation futureHops(List&lt;HopArrival&gt; futureHops) {
+<span class="nc" id="L126">    this.futureHops = futureHops;</span>
+<span class="nc" id="L127">    return this;</span>
+  }
+
+  public TrackingInformation addFutureHopsItem(HopArrival futureHopsItem) {
+<span class="nc" id="L131">    this.futureHops.add(futureHopsItem);</span>
+<span class="nc" id="L132">    return this;</span>
+  }
+
+  /**
+   * Hops coming up in the future - their times are estimations.
+   * @return futureHops
+  */
+  @NotNull @Valid 
+  @Schema(name = &quot;futureHops&quot;, description = &quot;Hops coming up in the future - their times are estimations.&quot;, required = true)
+  public List&lt;HopArrival&gt; getFutureHops() {
+<span class="nc" id="L142">    return futureHops;</span>
+  }
+
+  public void setFutureHops(List&lt;HopArrival&gt; futureHops) {
+<span class="nc" id="L146">    this.futureHops = futureHops;</span>
+<span class="nc" id="L147">  }</span>
+
+  @Override
+  public boolean equals(Object o) {
+<span class="nc bnc" id="L151" title="All 2 branches missed.">    if (this == o) {</span>
+<span class="nc" id="L152">      return true;</span>
+    }
+<span class="nc bnc" id="L154" title="All 4 branches missed.">    if (o == null || getClass() != o.getClass()) {</span>
+<span class="nc" id="L155">      return false;</span>
+    }
+<span class="nc" id="L157">    TrackingInformation trackingInformation = (TrackingInformation) o;</span>
+<span class="nc bnc" id="L158" title="All 2 branches missed.">    return Objects.equals(this.state, trackingInformation.state) &amp;&amp;</span>
+<span class="nc bnc" id="L159" title="All 2 branches missed.">        Objects.equals(this.visitedHops, trackingInformation.visitedHops) &amp;&amp;</span>
+<span class="nc bnc" id="L160" title="All 2 branches missed.">        Objects.equals(this.futureHops, trackingInformation.futureHops);</span>
+  }
+
+  @Override
+  public int hashCode() {
+<span class="nc" id="L165">    return Objects.hash(state, visitedHops, futureHops);</span>
+  }
+
+  @Override
+  public String toString() {
+<span class="nc" id="L170">    StringBuilder sb = new StringBuilder();</span>
+<span class="nc" id="L171">    sb.append(&quot;class TrackingInformation {\n&quot;);</span>
+<span class="nc" id="L172">    sb.append(&quot;    state: &quot;).append(toIndentedString(state)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L173">    sb.append(&quot;    visitedHops: &quot;).append(toIndentedString(visitedHops)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L174">    sb.append(&quot;    futureHops: &quot;).append(toIndentedString(futureHops)).append(&quot;\n&quot;);</span>
+<span class="nc" id="L175">    sb.append(&quot;}&quot;);</span>
+<span class="nc" id="L176">    return sb.toString();</span>
+  }
+
+  /**
+   * Convert the given object to string with each line indented by 4 spaces
+   * (except the first line).
+   */
+  private String toIndentedString(Object o) {
+<span class="nc bnc" id="L184" title="All 2 branches missed.">    if (o == null) {</span>
+<span class="nc" id="L185">      return &quot;null&quot;;</span>
+    }
+<span class="nc" id="L187">    return o.toString().replace(&quot;\n&quot;, &quot;\n    &quot;);</span>
+  }
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
