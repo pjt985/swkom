@@ -44,5 +44,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-context:5.3.20" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.springframework.boot:spring-boot-test-autoconfigure:2.7.0" level="project" />
   </component>
 </module>

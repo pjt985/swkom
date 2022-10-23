@@ -1,12 +1,17 @@
 package at.fhtw.swen3.services.mapper;
 
 import at.fhtw.swen3.OpenApiGeneratorApplication;
+import at.fhtw.swen3.model.entities.NewParcelInfoEntityModel;
+import at.fhtw.swen3.model.repositories.NewParcelInfoEmRepositroy;
 import at.fhtw.swen3.persistence.entity.ParcelEntity;
 import at.fhtw.swen3.persistence.entity.RecipientEntity;
 import at.fhtw.swen3.services.dto.*;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
-
+import org.springframework.context.annotation.Bean;
 import javax.validation.ConstraintViolation;
 import javax.validation.Validation;
 import javax.validation.Validator;
@@ -17,7 +22,12 @@ import java.util.Set;
 import static org.junit.jupiter.api.Assertions.*;
 
 @SpringBootTest(classes = OpenApiGeneratorApplication.class)
+@DataJpaTest
+@AutoConfigureTestDatabase(replace= AutoConfigureTestDatabase.Replace.NONE)
 class ParcelMapperTest {
+
+    @Autowired
+    NewParcelInfoEmRepositroy repo;
 
     @Test
     void testParcelDTO2Entity() {
@@ -115,5 +125,13 @@ class ParcelMapperTest {
 
         Set<ConstraintViolation<RecipientEntity>> violations = validator.validate(recipient);
         assertFalse(violations.isEmpty());
+    }
+
+    @Test
+    void testDatabase(){
+//        String npiemId = "1234567";
+//        NewParcelInfoEntityModel parcelInfoEM =  new NewParcelInfoEntityModel();
+//        parcelInfoEM.setTrackingId(npiemId);
+//        repo.save(parcelInfoEM);
     }
 }

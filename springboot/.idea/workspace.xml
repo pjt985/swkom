@@ -5,7 +5,78 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 2.18">
+      <change afterPath="$PROJECT_DIR$/../makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_activation_jakarta_activation_1_2_2.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_sun_istack_istack_commons_runtime_3_0_12.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_HikariCP_4_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_persistence_jakarta_persistence_api_2_2_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_transaction_jakarta_transaction_api_1_3_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjweaver_1_9_7.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_checkerframework_checker_qual_3_5_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_javax_el_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_jaxb_runtime_2_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jaxb_txw2_2_3_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_1_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_core_5_6_9_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_hibernate_spatial_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jboss_jandex_2_4_2_Final.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_postgresql_postgresql_42_3_5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_aop_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_data_jpa_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_jdbc_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_data_spring_data_jpa_2_7_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aspects_5_3_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jdbc_5_3_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_orm_5_3_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_3_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/StateEnumForEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/ErrorEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/GeoCoordinateEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/HopArrivalEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/HopEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/NewParcelInfoEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/ParcelEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/RecipientEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/TrackingInformationEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/TransferhouseEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/TruckEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/WarehouseEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/entities/WarehouseNextHopsEntityModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/ErrorEmRepositroy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/GeoCoordinateEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/HopArrivalEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/HopEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/NewParcelInfoEmRepositroy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/ParcelEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/RecipientEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/TrackingInformationEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/TransferhouseEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/TruckEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/WarehouseEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/model/repositories/WarehouseNextHopsEmRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/BaseModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/ErrorModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/GeoCoordinateModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/HopArrivalModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/HopModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/NewParcelInfoModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/ParcelModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/RecipientModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/TrackingInformationModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/TransferwarehouseModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/TruckModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/WarehouseModelMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/model/WarehouseNextHopsModelMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_2_5_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/openapi-spring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/openapi-spring.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/at/fhtw/swen3/services/mapper/ParcelMapperTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/at/fhtw/swen3/services/mapper/ParcelMapperTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/test.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +91,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JUnit5 Test Class" />
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -60,9 +131,15 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "create.test.in.the.same.root": "true",
+    "last_opened_file_path": "/home/pawel/Desktop/HandsOn4_JPA",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "MavenSettings",
-    "spring.configuration.checksum": "08adcde538376bb5a08c58ed482641aa"
+    "spring.configuration.checksum": "af646b7841eb475d4db4e2eb89332b41"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
+    ]
   }
 }]]></component>
   <component name="RecentsManager">
@@ -145,21 +222,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParcelMapperTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="at.fhtw.swen3.services.mapper.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="at.fhtw.swen3.services.mapper" />
-      <option name="MAIN_CLASS_NAME" value="at.fhtw.swen3.services.mapper.ParcelMapperTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ParcelMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="test" />
       <extension name="coverage">
@@ -170,6 +232,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="Sprint2Test" />
       <option name="MAIN_CLASS_NAME" value="Sprint2Test.ParcelMapperTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ParcelMapperTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="at.fhtw.swen3.services.mapper.model.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="at.fhtw.swen3.services.mapper" />
+      <option name="MAIN_CLASS_NAME" value="at.fhtw.swen3.services.mapper.ParcelMapperTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -209,6 +286,8 @@
       <workItem from="1665916107482" duration="459000" />
       <workItem from="1665916608047" duration="20264000" />
       <workItem from="1665936948840" duration="8676000" />
+      <workItem from="1666212423651" duration="448000" />
+      <workItem from="1666475084541" duration="24058000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
