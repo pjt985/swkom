@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="sprint test 3 without test 2.0">
-      <change afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/configuration/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/OpenApiGeneratorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/OpenApiGeneratorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/dto/TrackingInformation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/dto/TrackingInformation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/ParcelMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/at/fhtw/swen3/services/mapper/ParcelMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/main.iml" afterDir="false" />
-    </list>
+    <list default="true" id="d9e3d26a-c933-4ce4-900d-79609d3e85b4" name="Changes" comment="test" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -261,7 +253,7 @@
       <workItem from="1667569581797" duration="861000" />
       <workItem from="1667581948811" duration="374000" />
       <workItem from="1667657369536" duration="8926000" />
-      <workItem from="1667733133596" duration="7408000" />
+      <workItem from="1667733133596" duration="7817000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
@@ -452,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667666811165</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="dep inj and logging">
+      <created>1667748023681</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1667748023682</updated>
+    </task>
+    <task id="LOCAL-00029" summary="test">
+      <created>1667748273597</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1667748273597</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -483,6 +489,8 @@
     <MESSAGE value="sprint test 2.18" />
     <MESSAGE value="sprint test 3 without test" />
     <MESSAGE value="sprint test 3 without test 2.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="sprint test 3 without test 2.0" />
+    <MESSAGE value="dep inj and logging" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
 </project>
