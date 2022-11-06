@@ -11,6 +11,6 @@ public interface HopModelMapper {
     HopModelMapper INSTANCE = Mappers.getMapper(HopModelMapper.class);
 
 
-    Hop entityToDto(HopEntity hopEm);
-    HopEntity dtoToEntity(Hop hop);
+//    Hop entityToDto(HopEntity hopEm);
+//    HopEntity dtoToEntity(Hop hop);
 }
