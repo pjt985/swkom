@@ -1,5 +1,6 @@
 package at.fhtw.swen3.persistence.entities;
 
+import at.fhtw.swen3.persistence.enums.StateEnum;
 import at.fhtw.swen3.services.dto.TrackingInformation;
 import lombok.*;
 
@@ -52,7 +53,7 @@ public class ParcelEntity {
     private String value;
     @Column
     @NotNull
-    private TrackingInformation.StateEnum state;
+    private StateEnum state;
 
     @Column
     @Valid
