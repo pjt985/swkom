@@ -2,6 +2,7 @@ package at.fhtw.swen3.services.mapper;
 
 import at.fhtw.swen3.OpenApiGeneratorApplication;
 import at.fhtw.swen3.persistence.entities.NewParcelInfoEntity;
+import at.fhtw.swen3.persistence.enums.StateEnum;
 import at.fhtw.swen3.persistence.repositories.NewParcelInfoEmRepository;
 import at.fhtw.swen3.persistence.entities.ParcelEntity;
 import at.fhtw.swen3.persistence.entities.RecipientEntity;
@@ -27,8 +28,8 @@ import static org.junit.jupiter.api.Assertions.*;
 @SpringBootTest(classes = OpenApiGeneratorApplication.class)
 class ParcelMapperTest {
 
-    @Autowired
-    NewParcelInfoServiceImpl service;
+    //@Autowired
+    //NewParcelInfoServiceImpl service;
 
     public RecipientEntity rec = RecipientEntity.builder()
             .name("Max Mustermann")
@@ -79,7 +80,7 @@ class ParcelMapperTest {
         futureHopArrivals.add(futureHopArrival);
 
         TrackingInformation trackingInformation = new TrackingInformation();
-        trackingInformation.setState(TrackingInformation.StateEnum.PICKUP);
+        trackingInformation.setState(StateEnum.PICKUP);
         trackingInformation.setFutureHops(futureHopArrivals);
         trackingInformation.setVisitedHops(visitedHopArrivals);
 
