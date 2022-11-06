@@ -253,7 +253,7 @@
       <workItem from="1667569581797" duration="861000" />
       <workItem from="1667581948811" duration="374000" />
       <workItem from="1667657369536" duration="8926000" />
-      <workItem from="1667733133596" duration="7817000" />
+      <workItem from="1667733133596" duration="8196000" />
     </task>
     <task id="LOCAL-00001" summary="i am going through changes&#10;fixed my idea so it works with maven">
       <created>1665918178119</created>
@@ -458,7 +458,21 @@
       <option name="project" value="LOCAL" />
       <updated>1667748273597</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="test">
+      <created>1667748390551</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1667748390551</updated>
+    </task>
+    <task id="LOCAL-00031" summary="test">
+      <created>1667748518601</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1667748518601</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

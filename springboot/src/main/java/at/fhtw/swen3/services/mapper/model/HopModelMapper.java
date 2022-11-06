@@ -10,11 +10,7 @@ import org.mapstruct.factory.Mappers;
 public interface HopModelMapper {
     HopModelMapper INSTANCE = Mappers.getMapper(HopModelMapper.class);
 
-    @Mapping(source = "hopEm.locationCoordinates.getX()", target = "locationCoordinates.lat")
-    @Mapping(source = "hopEm.locationCoordinates.getY()", target = "locationCoordinates.lon")
-    Hop entityToDto(HopEntity hopEm);
 
-    @Mapping(source = "hop.locationCoordinates.lat", target = "locationCoordinates.setX()")
-    @Mapping(source = "hop.locationCoordinates.lon", target = "locationCoordinates.setY()")
+    Hop entityToDto(HopEntity hopEm);
     HopEntity dtoToEntity(Hop hop);
 }
